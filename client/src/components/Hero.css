@@ -1,0 +1,260 @@
+
+.hero {
+  width: 100%;
+  min-height: 620px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 45%, #c9f5df 0%, transparent 35%),
+    linear-gradient(115deg, #edfaf3, #f7fcfa);
+  padding: 75px 5%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: #d6f5e5;
+  color: #087f5b;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #142b22;
+}
+
+.hero h1 span {
+  color: #07845b;
+}
+
+.hero-description {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #5b7468;
+  margin-bottom: 32px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 760px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #e0eee6;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(15, 80, 50, 0.09);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 14px;
+  font-size: 15px;
+  background: transparent;
+}
+
+.search-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.search-buttons button {
+  padding: 15px 19px;
+  border-radius: 11px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.search-button {
+  background: #087f5b;
+  color: white;
+  border: 1px solid #087f5b;
+}
+
+.search-button:hover {
+  background: #056344;
+  transform: translateX(-100px);
+}
+
+.location-button {
+  background: white;
+  color: #087f5b;
+  border: 1px solid #087f5b;
+}
+
+.location-button:hover {
+  background: #e6f7ef;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-stat > span {
+  font-size: 30px;
+}
+
+.hero-stat strong,
+.hero-stat small {
+  display: block;
+}
+
+.hero-stat strong {
+  font-size: 17px;
+  color: #142b22;
+}
+
+.hero-stat small {
+  font-size: 13px;
+  color: #62776c;
+}
+
+/* Hero visual illustration */
+
+.hero-visual {
+  width: 100%;
+  min-width: 0;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  transform: none;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 15%,
+    black 40%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 15%,
+    black 40%
+  );
+}
+
+.hero {
+  overflow: hidden;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-buttons {
+    flex-direction: column;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+}
+
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #dff6e9;
+  color: #087f5b;
+  transition: all 0.25s ease;
+}
+
+.hero-stat:hover .stat-icon {
+  background: #087f5b;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}

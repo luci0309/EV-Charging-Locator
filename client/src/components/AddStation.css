@@ -1,0 +1,282 @@
+
+/* =================================
+   ADD STATION SECTION
+================================= */
+
+.add-station-section {
+  width: calc(100% - 40px);
+  max-width: 850px;
+  margin: 65px auto;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* =================================
+   FORM HEADING
+================================= */
+
+.add-station-heading {
+  margin-bottom: 32px;
+}
+
+.form-tag {
+  display: inline-block;
+  color: #087f5b;
+  background: #e6f5ee;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.add-station-heading h2 {
+  color: #172b24;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.add-station-heading p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =================================
+   FORM SECTIONS
+================================= */
+
+.add-station-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-section {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.form-section h3 {
+  color: #172b24;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.section-description {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+/* =================================
+   FORM GRID
+================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dce3e8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172b24;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: #a0aab5;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #087f5b;
+  box-shadow: 0 0 0 3px rgba(8, 127, 91, 0.10);
+}
+
+/* =================================
+   AVAILABILITY TOGGLE
+================================= */
+
+.availability-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.availability-box strong {
+  display: block;
+  color: #172b24;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.availability-box p {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0;
+}
+
+.availability-toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.availability-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: #cbd5e1;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.availability-toggle input:checked + .toggle-slider {
+  background: #087f5b;
+}
+
+.availability-toggle input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+.availability-toggle input:focus-visible + .toggle-slider {
+  outline: 3px solid rgba(8, 127, 91, 0.25);
+  outline-offset: 3px;
+}
+
+/* =================================
+   SUBMIT BUTTON
+================================= */
+
+.add-station-button {
+  width: 100%;
+  padding: 15px;
+  background: #087f5b;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.add-station-button:hover {
+  background: #066b4d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(8, 127, 91, 0.18);
+}
+
+.add-station-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =================================
+   SUCCESS AND ERROR MESSAGES
+================================= */
+
+.form-message {
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.form-message.success {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.form-message.error {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 600px) {
+  .add-station-section {
+    width: calc(100% - 30px);
+    margin: 40px auto;
+    padding: 22px 18px;
+    border-radius: 13px;
+  }
+
+  .add-station-heading h2 {
+    font-size: 23px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .availability-box {
+    padding: 14px;
+  }
+}

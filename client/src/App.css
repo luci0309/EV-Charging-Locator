@@ -1,0 +1,220 @@
+
+/* =====================================
+   MAIN APP
+===================================== */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(8, 127, 91, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(120deg, #e5f7ed, #f8fcf9);
+}
+
+/* =====================================
+   FEATURES SECTION
+===================================== */
+
+.features-section {
+  width: 100%;
+  padding: 75px 5%;
+  text-align: center;
+  box-sizing: border-box;
+
+  background-image:
+    linear-gradient(
+      rgba(239, 250, 243, 0.35),
+      rgba(239, 250, 243, 0.35)
+    ),
+    url("/features-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.features-section h2 {
+  font-size: 30px;
+  color: #172b24;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.features-section .stations-subtitle {
+  color: #64748b;
+  font-size: 17px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  padding: 32px 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #087f5b;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.feature-card p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =====================================
+   ADD STATION SECTION
+===================================== */
+
+.add-station-section {
+  width: 100%;
+  padding: 60px 5%;
+  background: #f8fafc;
+}
+
+/* =====================================
+   MAP SECTION
+===================================== */
+
+.map-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px 5%;
+}
+
+/* =====================================
+   CHARGING STATIONS SECTION
+===================================== */
+
+.stations-section {
+  width: 100%;
+  padding: 70px 5%;
+  text-align: center;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.stations-section h2 {
+  font-size: 30px;
+  color: #172b24;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.stations-section .stations-subtitle {
+  color: #64748b;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.filter-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 30px auto;
+}
+
+.stations-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+
+  text-align: left;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.site-footer {
+  width: 100%;
+  padding: 25px 8%;
+  text-align: center;
+  background: #172b24;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+  .features-container,
+  .stations-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .features-container,
+  .stations-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section,
+  .stations-section {
+    padding: 50px 5%;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .site-footer {
+    padding: 22px 5%;
+  }
+}

@@ -1,0 +1,338 @@
+
+/* =================================
+   STATION CARD
+================================= */
+
+.station-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width: 0;
+  height: 100%;
+}
+
+.station-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =================================
+   CARD HEADER
+================================= */
+
+.station-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.station-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.station-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #e6f5ee;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.station-card-header h3 {
+  color: #172b24;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 800;
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.station-location {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =================================
+   AVAILABILITY STATUS
+================================= */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.available {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.unavailable {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* =================================
+   STATION SPECIFICATIONS
+================================= */
+
+.station-specifications {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.specification {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 12px;
+  background: #f8fafc;
+  border: 1px solid #edf0f2;
+  border-radius: 11px;
+  min-width: 0;
+}
+
+.spec-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #e6f5ee;
+  color: #087f5b;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.specification div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.spec-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.specification strong {
+  color: #172b24;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.specification .station-price {
+  color: #087f5b;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =================================
+   CARD FOOTER AND BUTTONS
+================================= */
+
+.station-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f2;
+  margin-top: auto;
+}
+
+.secondary-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.station-card-footer button,
+.station-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.directions-button {
+  background: #087f5b;
+  color: white;
+}
+
+.directions-button:hover {
+  background: #066b4d;
+  transform: translateY(-2px);
+}
+
+.edit-button {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.edit-button:hover {
+  background: #bae6fd;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+/* =================================
+   EDIT FORM
+================================= */
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.edit-form-heading {
+  margin-bottom: 10px;
+}
+
+.edit-form-heading h3 {
+  color: #087f5b;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.edit-form-heading p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.edit-form label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.edit-form input,
+.edit-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #dce3e8;
+  border-radius: 8px;
+  background: white;
+  font-size: 13px;
+  outline: none;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  border-color: #087f5b;
+  box-shadow: 0 0 0 3px rgba(8, 127, 91, 0.08);
+}
+
+.station-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.save-button {
+  background: #087f5b;
+  color: white;
+}
+
+.save-button:hover {
+  background: #066b4d;
+}
+
+.cancel-button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.cancel-button:hover {
+  background: #d1d5db;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+  .station-card {
+    padding: 19px;
+  }
+
+  .station-card-header {
+    flex-direction: column;
+  }
+
+  .station-specifications {
+    gap: 9px;
+  }
+
+  .specification {
+    padding: 11px 9px;
+  }
+
+  .station-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .directions-button {
+    width: 100%;
+  }
+
+  .secondary-actions {
+    width: 100%;
+  }
+
+  .secondary-actions button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .station-specifications {
+    grid-template-columns: 1fr;
+  }
+}
