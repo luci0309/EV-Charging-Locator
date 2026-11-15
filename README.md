@@ -278,12 +278,11 @@ The project includes illustrative charging station records for demonstration and
 
 ## 👨‍💻 Author
 
-**Your Name**
+Abhishek Sriavstava
 
 Computer Science Engineering
 
-GitHub: [Your GitHub Profile](https://github.com/YOUR_USERNAME)
-
+GitHub: https://github.com/luci0309/
 ---
 
 ⭐ If you find this project interesting, consider giving the repository a star!
